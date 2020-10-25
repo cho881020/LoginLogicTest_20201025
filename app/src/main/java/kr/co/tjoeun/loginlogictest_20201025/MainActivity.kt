@@ -13,13 +13,18 @@ class MainActivity : AppCompatActivity() {
 
         loginBtn.setOnClickListener {
 
+//            입력된 이메일과 / 비밀번호를 별도의 변수에 저장
             val inputEmail = emailEdt.text.toString()
             val inputPw = passwordEdt.text.toString()
 
+//            질문 : 입력한 이메일 -"admin@test.com" AND 입력한 비번 - "qwer"
             if (inputEmail == "admin@test.com" && inputPw == "qwer") {
+
+//                질문 결과가 true (맞다고 판명) 이면 관리자 로그인 토스트
                 Toast.makeText(this, "관리자가 로그인했습니다.", Toast.LENGTH_SHORT).show()
             }
             else {
+//                질문 결과가 false (하나라도 틀린 상황) 이면 로그인 실패 토스트
                 Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
             }
 
